@@ -1,0 +1,77 @@
+
+body {
+  background-color: #FAFAFA;
+  font-family: "Roboto";
+}
+
+.formInput {
+  background-color: #ffffff;
+  width: 366px;
+  margin: 10px auto;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #999;
+}
+
+.formInput__input{
+  width: 100%;
+}
+
+
+.formInput__header {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.reviews {
+  background-color: #ffffff;
+  width: 366px;
+  margin: 10px auto;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #999;
+}
+
+.reviews__header {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.reviews__review-wrapper {
+  margin: 0 16px;
+}
+
+.review {
+  position: relative;
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.review-wrapper {
+  margin-left: 10px;
+}
+
+.review__text {
+  word-wrap:break-word;
+}
+
+.review__title {
+  max-width: 260px;
+  margin-bottom: 5px;
+}
+
+.review__date {
+  font-size: 12px;
+}
+
+.review__text {
+  font-size: 14px;
+  color: #999999;
+}
+
+.review__delete-button {
+  position: absolute;
+  right: -5px;
+}
+
