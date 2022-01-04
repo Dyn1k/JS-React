@@ -15,10 +15,6 @@ function App() {
     const [feedback, setFeedback] = useState([]);
     const [check, setCheck] = useState(false);
 
-    const nameValue = document.getElementById('name');
-    const emailValue = document.getElementById('email');
-    const textValue = document.getElementById('text');
-
     const checkEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     const date = new Date();
@@ -44,10 +40,6 @@ function App() {
             setName('');
             setEmail('');
             setText('');
-
-            nameValue.value = '';
-            emailValue.value = '';
-            textValue.value = '';
 
             setCheck(false);
         }
@@ -92,15 +84,15 @@ function App() {
             <form className={'formInput'}>
                 <h2 className={'formInput__header'}>Обратная связь:</h2>
                 <TextField className={'formInput__input'} id="name" error={check && !name}
-                           helperText={check && !name ? 'Введите имя' : ' '} label="Имя" variant="outlined"
+                           helperText={check && !name ? 'Введите имя' : ' '} label="Имя" variant="outlined" value={name}
                            onChange={(event) => setName(event.target.value)}/>
                 <TextField className={'formInput__input'} id="email"
                            error={(check && !email) || (check && !checkEmail.test(email))} label="Почта"
                            helperText={check && !email ? 'Введите почту' : check && !checkEmail.test(email) ? 'Почта введена неверно' : ' '}
-                           variant="outlined" onChange={(event) => setEmail(event.target.value)}/>
+                           variant="outlined" value={email} onChange={(event) => setEmail(event.target.value)}/>
                 <TextField selected className={'formInput__input'} id="text" error={check && !text}
                            helperText={check && !text ? 'Введите что-нибудь' : ' '} label="Текст..."
-                           variant="outlined" fullWidth multiline rows={4}
+                           variant="outlined" fullWidth multiline rows={4} value={text}
                            onChange={(event) => setText(event.target.value)}/>
                 <Button className={'formInput__input'} variant="contained" onClick={addFeedback}>Отправить</Button>
             </form>
