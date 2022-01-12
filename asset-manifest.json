@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/JS-React/WebstormProjects/learning-react/movies-project/static/css/main.30dc49ee.css",
-    "main.js": "/JS-React/WebstormProjects/learning-react/movies-project/static/js/main.0e7af603.js",
-    "index.html": "/JS-React/WebstormProjects/learning-react/movies-project/index.html",
-    "main.30dc49ee.css.map": "/JS-React/WebstormProjects/learning-react/movies-project/static/css/main.30dc49ee.css.map",
-    "main.0e7af603.js.map": "/JS-React/WebstormProjects/learning-react/movies-project/static/js/main.0e7af603.js.map"
+    "main.css": "/JS-React/static/css/main.30dc49ee.css",
+    "main.js": "/JS-React/static/js/main.0e7af603.js",
+    "index.html": "/JS-React/index.html",
+    "main.30dc49ee.css.map": "/JS-React/static/css/main.30dc49ee.css.map",
+    "main.0e7af603.js.map": "/JS-React/static/js/main.0e7af603.js.map"
   },
   "entrypoints": [
     "static/css/main.30dc49ee.css",
