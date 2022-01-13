@@ -2,7 +2,7 @@ import React from 'react';
 
 class Search extends React.Component {
     state = {
-        search: '',
+        search: this.props.film,
         type: 'all',
     }
 

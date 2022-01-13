@@ -8,12 +8,12 @@ const KEY_API = process.env.REACT_APP_KEY_API;
 class Main extends React.Component {
 
     state = {
-        movies: [],
+        movies: ['warcraft'],
         loading: true,
     }
 
     componentDidMount() {
-        fetch(`https://www.omdbapi.com/?apikey=${KEY_API}&s=warcraft`)
+        fetch(`https://www.omdbapi.com/?apikey=${KEY_API}&s=${this.state.movies}`)
             .then(response => response.json())
             .then(data => this.setState({movies: data.Search, loading: false}))
             .catch((error) => {
@@ -37,7 +37,7 @@ class Main extends React.Component {
         const {movies, loading} = this.state;
         return (
             <main className={'container content'}>
-                <Search searchMovies={this.searchMovies}/>
+                <Search searchMovies={this.searchMovies} film={this.state.movies}/>
                 {loading ? (
                     <Preloader/>
                 ) : <Movies movies={movies}/>}
